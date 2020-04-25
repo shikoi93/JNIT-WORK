@@ -1,0 +1,18 @@
+//single inheritence
+class School{
+String Teacher;
+String Books;
+void teach() {
+System.out.println("Teacher teaches books.");
+}
+}
+public class CommerceSchool extends School {
+String mainCourse = "Account";
+public static void main(String args[]){
+	AccountTeacher A = new AccountTeacher();
+	System.out.println(A.Books);
+	System.out.println(A.Teacher);
+	System.out.println(A.mainCourse);
+	A.teach();
+}
+}
