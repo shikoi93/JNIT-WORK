@@ -1,0 +1,31 @@
+//heirarchical inheritance
+public class GrandParents{
+public void guardian1(){
+	System.out.println("Guardian of GrandParents");
+}
+}
+public class Parents extends GrandParents {
+public void guardian2 {
+	System.out.println("Guardian of Parents");
+}
+}
+public class Children extends Parents {
+public void guardian3 {
+	System.out.println("Guardian of Children");
+}
+}
+public class GrandChildren extents Children{
+public void guardian4{
+	System.out.println("Guardian of GrandChildren");
+}
+}
+public class Family{
+public static void main(String args[]){
+Parents p=new Parents();
+Children c=new Children();
+GrandChildren gc=new GrandChildren();
+p.guardian1();
+c.guardian1();
+gc.guardian1();
+}
+}
