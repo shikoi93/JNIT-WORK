@@ -1,0 +1,34 @@
+//multiple inheritence
+class Schoool;
+   public School(){
+    System.out.println("Class is School");
+}
+public void schoolType() {
+   System.out.println("the type of school is : school");
+}
+}
+class Commerce extends School{
+   public Commerce(){
+	System.out.println("Class is Commerce.");
+}
+public void lesson() {
+	System.out.println("Lesson: Commerce");
+}
+public void topic() {
+	System.out.println("length: 200pages");
+}
+}
+public class CommerceVol extends Commerce(){
+   public CommerceVol() {
+	System.out.println("Commerce Volume is: II");
+}
+public void lesson() {
+	System.out.println("length: 600pages");
+}
+public static void main(String args[]) {
+ CommerceVol c=new CommerceVol();
+	c.schoolType();
+	c.lesson();
+	c.topic();
+}
+}
