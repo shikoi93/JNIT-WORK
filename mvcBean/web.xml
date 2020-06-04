@@ -1,0 +1,13 @@
+<web-app>
+<servlet>  
+<servlet-name>mvclogin</servlet-name>
+<servlet-class>com.mvcbeanjava.LoginMvcServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+<servlet-name>mvclogin</servlet-name>
+<url-pattern>/login_mvc</url-pattern>
+
+</servlet-mapping>
+
+</web-app>
