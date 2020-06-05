@@ -1,0 +1,20 @@
+load()= only use the load() method if you are sure that the object exists and
+                load method will throw an exception if the unique id is not found in the  database.
+		load() method will throw an exception if the unique id is not found in the database.
+		load() it is used to fetch data from the database for the given identifier.
+		load() is considered to be faster.
+
+get()= if you are not sure that the object exists, then use one of the get() methods
+              get() method will return null if the unique id is not found in the () database
+              get() will hit the database immediately.
+
+	      get() it is used to fetch data from the database for the given identifier.
+	      get() is slower than load() because it return fully initialized object when impact the performance of the application
+
+
+
+
+
+
+
+    
