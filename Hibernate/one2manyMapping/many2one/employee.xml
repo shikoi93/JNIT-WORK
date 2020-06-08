@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//En"
+        "http://www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.one2many.Employee" table="employee">
+        <id name="id" column="eid"/>
+        <property name="ename" column="ename" length="20"/>
+        <!--<set name="x" cascade="all">
+            <key column="fkid"></key>
+            <one-to-many class="com.one2many.Company"/>
+        </set>
+
+        <list name="x" cascade="all">
+        <key column="fkid"></key>
+        <index column="listindex"></index>
+        <one-to-many class="com.one2many.Company"/>
+        </list>
+
+        <map name="x" cascade="all">
+            <key column="fkid"></key>
+            <index column="company" type="string"></index>
+            <one-to-many class="com.one2many.Company"/>
+        </map>
+        -->
+
+    </class>
+</hibernate-mapping>

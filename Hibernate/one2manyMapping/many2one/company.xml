@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//En"
+        "http://www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.one2many.Company" table="company">
+        <id name="cid" column="cid"/>
+        <property name="cname" column="cname" length="20"/>
+ <!---       <property name="fkid" insert="false" column="fkid"/>    -->
+        <many-to-one name="e" column="fkeid" class="com.one2many.Employee" cascade="all"></many-to-one>
+
+    </class>
+</hibernate-mapping>
