@@ -7,10 +7,21 @@
     <class name="com.one2many.Employee" table="employee">
         <id name="id" column="eid"/>
         <property name="ename" column="ename" length="20"/>
-        <set name="x" cascade="all">
+        <!--<set name="x" cascade="all">
             <key column="fkid"></key>
             <one-to-many class="com.one2many.Company"/>
         </set>
 
+        <list name="x" cascade="all">
+        <key column="fkid"></key>
+        <index column="listindex"></index>
+        <one-to-many class="com.one2many.Company"/>
+        </list>
+-->
+        <map name="x" cascade="all">
+            <key column="fkid"></key>
+            <index column="company" type="string"></index>
+            <one-to-many class="com.one2many.Company"/>
+        </map>
     </class>
 </hibernate-mapping>
