@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//En"
+        "http://www.hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.many2many.Course" table="courses">
+<id name="cid" column="cid"/>
+<property name="cname" column="cname" length="15"/>
+<property name="duration" column="duration" length="15"/>
+    <set name="s" table="student_courses" cascade="all" inverse="false">
+        <key column="csid"/>
+        <many-to-many class="com.many2many.Student" column="stid"/>
+    </set>
+</class>
+</hibernate-mapping>
