@@ -1,0 +1,12 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+		"http://springframework.org/dtd/spring-beans-2.0.dtd">
+	
+	
+	<beans>
+		<bean id="rx" class="com.employeeconstructor.Employee">
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="Shiva"></constructor-arg>
+		<constructor-arg value="technology"></constructor-arg>
+		</bean>
+
+	</beans>
