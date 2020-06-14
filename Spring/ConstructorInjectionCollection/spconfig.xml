@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+		<bean id="question" class="com.collection.Question">
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="what is a computer?"></constructor-arg>
+		<constructor-arg>
+<!--
+  	<list>  
+	<set>
+		<value>Ans: Computer is a machine.</value>
+		<value>Ans: It carries out sequence of Arithmetic and Logical operations.</value>
+		<value>Ans: Follows set of instruction given to it in the form of binary code.</value>
+		//</list>   
+	//</set>
+	
+	-->
+	
+	<map>
+		<entry key ="*" value="Computer is a machine."/>
+		<entry key ="**" value="It carries out sequence of Arithmetic and Logical operations."/>
+		<entry key ="***" value="Follows set of instructions given to it in the form of binary code."/>
+		<entry key ="****" value="Charles Babbage is its father."/>
+	</map>
+		</constructor-arg>
+		</bean>
+		</beans>
+		
+		
