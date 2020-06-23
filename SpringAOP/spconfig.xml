@@ -1,0 +1,27 @@
+
+
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+  <beans>
+  <bean id="ma" class="com.ex.MyAccount"/>
+<!--    <bean id="ax" class="com.ex.AuthenticationAspect"/>    -->
+  <bean id = "ax" class="com.ex.AuthenticationLoggingAspect"/>
+  <bean id="la" class="com.ex.LoggingAspect"/> 
+  
+  <bean id="pfb" class="org.springframework.aop.framework.ProxyFactoryBean">
+  <property name="proxyInterfaces" value="com.ex.KathmanduBank"/>
+  <property name="interceptorNames">
+  		<list>
+  		<value>ax</value>
+ <!--   		<value>la</value>   --> 
+  		</list>
+  			
+  		
+  </property>
+  <property name="target">
+  <ref bean="ma"/>
+  </property>
+ </bean>
+ </beans>
